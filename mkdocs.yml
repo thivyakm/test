@@ -1,0 +1,7 @@
+site_name: 'Example Documentation'
+
+nav:
+  - Home: index.md
+
+plugins:
+  - techdocs-core
