@@ -1,0 +1,33 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: kat-apps-palladium-portal-git
+  namespace: thivya
+  description: An example of a Backstage application.
+  # Example for optional annotations
+  annotations:
+    backstage.io/techdocs-ref: url:https://sourcecode.jnj.com/projects/ASX-JDFO/repos/template-xena-docs-test/browse?at=refs%2Fheads%2Fmain
+spec:
+  type: website
+  owner: cmason11
+  lifecycle: experimental
+
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: guest
+spec:
+  owner: cmason11
+  memberOf: [guests]
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name:  guests
+spec:
+  owner: cmason11
+  type: team
+  children: []
